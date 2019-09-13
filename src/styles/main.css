@@ -60,6 +60,10 @@
   margin-bottom: 5px;
 }
 
+.error-message {
+  color: red;
+}
+
 /* Larger than mobile screen */
 @media (min-width: 40rem) {
   .appTitle {
