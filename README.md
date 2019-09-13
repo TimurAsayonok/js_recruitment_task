@@ -33,3 +33,31 @@ In order to keep things simple we used only really small number of libs for this
 - [Milligram](https://milligram.io/) and [Normalize](https://necolas.github.io/normalize.css/) for some simple styling
 - [Eslint](https://eslint.org/) and [Prettier](https://prettier.io/) for static code check
 - [PostCSS](https://postcss.org/) with [Autoprefixr](https://autoprefixer.github.io/) for css compatibility
+
+# Tsimur Asayonak comments
+
+**Added Main Libs**
+
+- `react` - as a main framework and `react-dom` as a helper for react.js
+- `typescript`, `tslint`, `tslint-config-airbnb`, `tslint-react`, `@types/react` - libs for typescript as a main Types checking
+- `babel-polyfill`, `babel-preset-stage-0` - libs for babel
+
+**Checklist from Task**
+✅ Display list of news from last 30 days
+✅ Add pagination: 10 items per page
+✅ Add news filtering based on section selection from dropdown. You can restrict it only to: `sport`, `books`, `business`, `culture`
+✅ Add search functionality for filtering news content based on provided phrase
+✅ Each news list element should have following elements:
+
+- Title
+- Section name
+- Date of publication
+- Link to full article (open in new window)
+- "Read Later" button
+  ✅ Clicking "Read later" button should add selected news to the "Read later" section on the right. Those elements should be stored somewhere and displayed even after refresh.
+  ✅ Each element from "read later" can be removed by clicking "delete" button
+  🚫 (Bonus) It would be beneficial if you would write some kind of tests, either unit or integration
+  ✅ (Bonus) If you will find time, please briefly describe your approach to solving this task.
+
+**Small Description of Task**
+#TODO
