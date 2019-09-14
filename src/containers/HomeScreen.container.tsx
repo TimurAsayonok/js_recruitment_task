@@ -63,6 +63,7 @@ export class HomeScreenContainer extends React.PureComponent<Props, State> {
     this.fetchReadLaterNews();
   }
 
+  // fetchind news data
   fetchNewsMethod = () => {
     const params = this.getQuesryParamsFromState();
     const paramsWithDate = {
@@ -78,6 +79,7 @@ export class HomeScreenContainer extends React.PureComponent<Props, State> {
       .catch(error => this.onSetErrorMessage(error.data.response));
   }
 
+  // get read later news data from localStorage
   fetchReadLaterNews = () => {
     const readLaterNewsFromStorage = getAllReadLaterNews();
 
@@ -86,6 +88,7 @@ export class HomeScreenContainer extends React.PureComponent<Props, State> {
     });
   }
 
+  // parse QuesryParams to State
   getQuesryParamsFromState = () => {
     const params = this.state.params
     return {
@@ -95,12 +98,14 @@ export class HomeScreenContainer extends React.PureComponent<Props, State> {
     };
   };
 
+  // map news data to state
   mapNewsToState = (newNews: NewsType[]) => {
     this.setState({
       news: newNews,
     });
   }
 
+  // update query params
   updateParams = (newPrams: object) => {
     const params = this.state.params;
 
@@ -112,6 +117,7 @@ export class HomeScreenContainer extends React.PureComponent<Props, State> {
     });
   }
 
+  // set error to state
   onSetErrorMessage = (message: ErrorMessage) => {
     this.setState({
       error: {
@@ -120,6 +126,7 @@ export class HomeScreenContainer extends React.PureComponent<Props, State> {
     });
   }
 
+  // delete error
   deleteErrorMessage = () => {
     this.onSetErrorMessage({
       message: '',
@@ -127,6 +134,7 @@ export class HomeScreenContainer extends React.PureComponent<Props, State> {
     });
   }
 
+  // change section param
   onChangeSection = (event: any) => {
     const target = event.target;
     const newSection = target.value;
@@ -137,6 +145,7 @@ export class HomeScreenContainer extends React.PureComponent<Props, State> {
     });
   }
 
+  // change page param
   onChageCurrentPage = (event: any) => {
     const target = event.target;
     const newPage = target.value;
@@ -146,6 +155,7 @@ export class HomeScreenContainer extends React.PureComponent<Props, State> {
     });
   }
 
+  // change search input param
   onChangeSearchInput = (event: any) => {
     clearTimeout(this.searchInputTimeout);
     const target = event.target;
@@ -161,11 +171,13 @@ export class HomeScreenContainer extends React.PureComponent<Props, State> {
     );
   }
 
+  // add news item to localStorage
   onAddItemToReadLaterNews = (news: NewsType) => {
     addItemToStorage(news);
     this.fetchReadLaterNews();
   }
 
+  // delete new item from localStorage
   onDeleteNewsFromReadLaterList = (itemId: string) => {
     removeItemFromStorage(itemId);
     this.fetchReadLaterNews();
