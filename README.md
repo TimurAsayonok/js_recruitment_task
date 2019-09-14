@@ -83,3 +83,5 @@ Main code of application you can find inside `HomeScreen.container.tsx`
 - `ScreenHeader` - component will show screen header
 - `FiltersSection` - component will show components for filtering news list
 - `NewsComponent` - component will show components with news
+
+And We created separate components for all sections, buttons, error messages and forms. We created helpers for fetch methods and for method wich will save and delete news on localStorage.
