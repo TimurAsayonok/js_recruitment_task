@@ -66,22 +66,23 @@ Main code of application you can find inside `HomeScreen.container.tsx`
 
 `HomeScreen.container.tsx.` - has main function:
 
-- `fetchNewsMethod` - method for fetchind news data
+- `fetchNewsMethod` - method for fetching news data
 - `fetchReadLaterNews` - method for getting read later news data from localStorage
-- `getQuesryParamsFromState` - method for pasing query params to componet state
-- `mapNewsToState` - method for mapping news data to componet state
-- `updateParams` - method for update query params inside component state
-- `onSetErrorMessage` - method for setting request error to component state
-- `deleteErrorMessage` - method for delitting error from component state
-- `onChangeSection` - method for changen section value inside request params
-- `onChangeSearchInput` - method for change search text value inside request params
+- `getQuesryParamsFromState` - method for parsing query params to component state
+- `mapNewsToState` - method for mapping news data to component state
+- `updateParams` - method for updating query params inside component state
+- `onSetErrorMessage` - method for set request error to component state
+- `deleteErrorMessage` - method for delite error from component state
+- `onChangeSection` - method for changing section value inside request params
+- `onChangeSearchInput` - method for changing search text value inside request params
 - `onAddItemToReadLaterNews` - method for adding news to readLaterNews list. This method will save news item in localStorage
 - `onDeleteNewsFromReadLaterList` - method will delete news from readLaterNews list and from localStorage
 
-`HomeScreen.container.tsx.` - has render method with component:
+`HomeScreen.container.tsx.` - has render method with components:
 
-- `ScreenHeader` - component will show screen header
-- `FiltersSection` - component will show components for filtering news list
-- `NewsComponent` - component will show components with news
+- `<ScreenHeader />` - component will show screen header
+- `<FiltersSection />` - component will show components for filtering news list
+- `<NewsComponent />` - component will show components with news
 
 And We created separate components for all sections, buttons, error messages and forms. We created helpers for fetch methods and for method wich will save and delete news on localStorage.
+Unfortunately we did now create some kind of tests, either unit or integration =(
