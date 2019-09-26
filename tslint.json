@@ -14,12 +14,7 @@
     "no-console": [true, "debug", "dir", "log", "trace", "warn"],
     "no-empty-interface": false,
     "no-namespace": false,
-    "no-unused-variable": [
-      true,
-      {
-        "ignore-pattern": "^_"
-      }
-    ],
+    "no-unused-variable": false,
     "no-boolean-literal-compare": false,
     "object-literal-sort-keys": false,
     "object-shorthand-properties-first": false,

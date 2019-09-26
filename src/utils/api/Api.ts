@@ -1,6 +1,5 @@
 // import { ResponsesCache } from '/utils/Storage';
 import { ApiMethodType } from '../interfaces/api';
-import { async } from 'q';
 // we need cors for our requests
 const CORS = 'https://cors-anywhere.herokuapp.com/';
 // api url
